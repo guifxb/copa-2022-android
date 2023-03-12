@@ -22,7 +22,6 @@ class MainViewModel @Inject constructor(
         fetchMatches()
     }
 
-
     private fun fetchMatches() = viewModelScope.launch {
         getMatchesUseCase()
             .flowOn(Dispatchers.Main)
